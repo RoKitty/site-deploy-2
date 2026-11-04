@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 800;
+  src: url("/assets/fonts/Metropolis-ExtraBold.woff") format("woff"),
+       url("/assets/fonts/Metropolis-ExtraBold.wof2") format("woff")
+}
+
+.md-search__button {
+  box-shadow: inset 0 1px 2px hsl(0 0% 0% / 5%);
+  border-radius: 6px;
+}
+
+body {
+  --md-text-font-family: -apple-system, BlinkMacSystemFont, "Inter var", Inter, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", sans-serif;
+}
+
+.md-header {
+  transition: background 66ms linear;
+}
+
+.md-header:not(.md-header--shadow) {
+  background: transparent;
+}
+
+
+[data-md-color-scheme=default] {
+  --md-default-bg-color: hsl(216 20% 95%);
+  --md-default-bg-color--light: white;
+  --md-default-bg-color--lighter: white;
+  --md-default-bg-color--lightest: white;
+  --md-hue: 211deg;
+  --md-primary-fg-color: hsl(211, 100%, 50%);
+  --md-accent-fg-color: hsl(211, 100%, 50%);
+  --md-code-bg-color: white;
+
+  .md-header {
+    backdrop-filter: none;
+  }
+
+  .md-header--shadow {
+    background: white;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+}
+
+[data-md-color-scheme] {
+  color: var(--md-typeset-color);
+}
+
+[data-md-color-scheme=slate] {
+  --md-default-bg-color: hsl(0 0% 6.25%);
+  --md-default-bg-color--light: hsl(0 0% 11%);
+  --md-default-bg-color--lighter: hsl(0 0% 11%);
+  --md-default-bg-color--lightest: hsl(0 0% 11%);
+  --md-hue: 211deg;
+  --md-primary-fg-color: hsl(211, 100%, 65%);
+  --md-accent-fg-color: hsl(211, 100%, 65%);
+  --md-accent-fg-color--transparent: hsl(211 100% 65% / 10%);
+
+  --md-default-fg-color: white;
+  --md-default-fg-color--light: hsl(0 0% 100% / 66%);
+  --md-default-fg-color--lighter: hsl(0 0% 100% / 33%);
+  --md-default-fg-color--lightest: hsl(0 0% 100% / 5%);
+
+  .md-header {
+    backdrop-filter: none;
+  }
+
+  .md-header--shadow {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+}
+
+.md-header__title {
+  letter-spacing: normal;
+}
+
+
+.feature-row img {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px hsl(0 0% 0% / 10%);
+  background: var(--md-default-bg-color--light);
+}
+
+.feature-row {
+  grid-gap: 1rem !important;
+}
+
+.md-header__source {
+  display: none !important;
+}
+
+.md-typeset .question>.admonition-title:before, .md-typeset .question>summary:before, 
+.md-typeset .question>.admonition-title:after, .md-typeset .question>summary:after {
+  background-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .question {
+  background-color: var(--md-accent-fg-color--transparent) !important;
+}
+
+.md-social__link {
+  display: flex;
+  height: unset !important;
+  width: unset !important;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.md-social__link > svg {
+  width: 24px;
+  aspect-ratio: 1 / 1;
+  max-width: unset;
+  max-height: unset;
+}
+
+.md-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
